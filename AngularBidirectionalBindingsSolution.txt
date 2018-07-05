@@ -1,0 +1,18 @@
+
+Bidirectional Binding: 
+
+
+<h1>Login</h1>
+	<div class="form-group row">
+		<div class="col-2">
+			<label for="name">Name:</label>
+		</div>
+	<div class="col-8">
+		<input [(ngModel)]="loginCredentials.name" ...>
+	</div>
+</div>
+...
+<div class="row">
+	<div class="col-10">
+	<button ...>Log in '{{loginCredentials.name}}'</button>
+</div

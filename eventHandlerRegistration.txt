@@ -1,0 +1,31 @@
+
+// event handler -> easy way (programmatisch)
+
+
+
+// setOn für Maus-Klick; setOn Tastatureingabe
+
+
+// event handler (Rich-API)
+
+
+
+// Event filter
+
+
+// Change listener
+
+
+
+// Complete change listener
+
+
+
+
+// Irgend ein Event
+
+
+// Irgend ein Action event
+
+
+// Ein Event das sowohl ein Maus-klick oder auch eine Tastatureingabe sein könnte

@@ -1,0 +1,33 @@
+// Grid Pane ...
+
+	// Settings for grid pane (How many columns rows etc.)
+
+
+		// label for series
+		
+
+		// Create book mark button
+		
+
+		// ComboBox that accepts input for series with some grid pane positioning
+		
+		
+		// List of possible values when clicked on button
+		
+			
+
+
+
+// Border Pane
+
+
+	// Header component at the top
+
+	// Line chart at center
+
+
+
+	// Progress bar at the bottom. Make sure other elements can be placed next to progress bar.
+
+
+

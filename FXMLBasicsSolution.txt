@@ -1,0 +1,59 @@
+// Grid Pane ...
+<GridPane fx:id="rootPane" style-class="chartHeader" stylesheets="@chartheader.css" fx:controller="de.fhrosenheim. ... .Header">
+	// Settings for grid pane (How many columns rows etc.)
+	<columnConstraints>
+		<ColumnConstraints .../>
+		<ColumnConstraints .../>
+	</columnConstraints>
+	<rowContraints>
+		<RowConstraints .../>
+		</RowConstraints .../>
+	</rowConstraints>
+	<children>
+		// label for series
+		<Label text="series" GridPane.rowIndex="1" />
+
+		// Create book mark button
+		<Button fx:id="createBookMarkButton" onAction="#onCreateBookmark" text="Create Bookmark" />
+
+		// ComboBox that accepts input for series with some grid pane positioning
+		<ComboBox fx:id="seriesInput" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+		
+		// List of possible values when clicked on button
+		<SplitMenuButton ...>
+			<items>
+				<MenuItem text="Action1" />
+				<MenuItem text="Actioon" />
+			</items>
+		</SplitMenuButton>
+	</children>
+</GridPane>
+
+
+// Border Pane
+<BorderPane ...>
+
+	// Header component at the top
+	<top>
+		<fx:include fx:id=header" source="../header/Header.fxml">
+	</top>
+	// Line chart at center
+	<center>
+		<LineChart BorderPane.alignment="CENTER">
+			<xAxis>
+				<NumberAxis side="BOTTOM">
+			</xAxis>
+			<yAxis>
+				<NumberAxis side="LEFT" />
+			</xAxis>
+	</center>
+
+	// Progress bar at the bottom. Make sure other elements can be placed next to progress bar.
+	<bottom>
+		<VBox BorderPane.alignment="CENTER">
+			<children>
+				<ProgressBar progress="0.0">
+			</children>
+	</bottom>
+</BorderPane>
+

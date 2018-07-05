@@ -1,0 +1,16 @@
+Interface HeaderActionListener:
+
+
+
+
+
+HeaderController:
+
+
+
+
+
+Im ChartController, d.h. Komponente die Header nutzt:
+
+// Implementierung des Interfaces HeaderActionListener
+

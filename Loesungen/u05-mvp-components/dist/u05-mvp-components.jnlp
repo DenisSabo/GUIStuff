@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="u05-mvp-components.jnlp">
+  <information>
+    <title>u05-mvp-components</title>
+    <vendor>dominik.haas</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="u05-mvp-components.jar" size="12723" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="u05-mvp-components" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="de.fhrosenheim.gui.u05.U05MvpComponents"  name="u05-mvp-components" />
+  <update check="always"/>
+</jnlp>

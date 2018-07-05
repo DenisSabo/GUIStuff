@@ -1,0 +1,3 @@
+
+Event binding: (Say hello Component)
+

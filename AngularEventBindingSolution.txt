@@ -1,0 +1,17 @@
+
+Event binding: (Say hello Component)
+
+@Component({
+	selector: 'say-hello',
+	template: `
+		<button (click)="sayHello()" type="button">Say hello</button>
+	`
+})
+
+export class SayHelloComponent {
+	private message: string = "hello world!";
+
+	public sayHello(): void {
+		alert(this.message);
+	}
+}

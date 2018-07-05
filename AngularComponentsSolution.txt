@@ -1,0 +1,44 @@
+Child:
+
+@Component{(
+
+	selector: "login",
+	template: '
+		...
+	',
+
+)}
+export class LoginComponent implements OnInit{
+
+	@Input() initName : string;
+	@Output() onLogin : EventEmitter<LoginCredentials> = new EventEmitter<EventEmitter>();
+
+	public loginCredentials : LoginCredentials;
+
+	public void ngOnInit(){
+		this.loginCredentials = new LoginCredentials(initName, null);
+	}
+
+	public doLogin() : void {
+		this.onLogin.emit(this.loginCredentials);
+	}
+}
+
+Parent:
+
+@Component{(
+	
+	selector: "my-app",
+	template: '
+		<login [initName]="'lastLogin'" (onLogin)="onLoginFromComponent($event)">
+		</login>
+	',
+	
+)}
+export class AppComponent{
+
+	public onLoginFromComponent(loginCredentials : LoginCredentials) : void {
+		...
+	}
+
+}

@@ -1,0 +1,69 @@
+
+// event handler -> easy way (programmatisch)
+
+button.setOnAction(new EventHandler(){
+	@Override
+	public void handle(Event event){
+		...	
+	}
+}
+
+// setOn für Maus-Klick; setOn Tastatureingabe
+button.setOnMouseClicked(); inputField.setOnKeyTyped();
+
+// event handler (Rich-API)
+
+button.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<Event>(){
+	@Override
+	public void handle(Event event){
+		...
+	}
+);
+
+// Deklarativ
+FXML:
+	<TextField fx:id="usernameField" onAction="#doLogin" >
+
+Java:
+	@FXML
+	private void doLogin(ActionEvent e) { … }
+
+
+
+// Event filter
+// Zweiter Paramter ist ein event-handler (anscheinend)
+rootPane.addEventFilter(KeyEvent.KEY_TYPED, e -> {
+	if("a".equals(e.getCharacter())) {
+		e.consume();
+	}
+	LOGGER.info("KEY_PRESSED on root");
+});
+
+// Change listener
+// sampling must be an observable value
+
+sampling.addListener((ObservableValue<? extends String> observable, String oldValue, String newValue) -> {
+	aggregation.set(null);
+	graph.set(null);
+});
+
+// Complete change listener
+
+slider.valueProperty().addListener(new ChangeListener<Number>() {
+    @Override
+    public void changed(ObservableValue<? extends Number> observable,
+            Number oldValue, Number newValue) {
+
+        outputTextArea.appendText("Slider Value Changed (newValue: " + newValue.intValue() + ")\n");
+    }
+});
+
+
+// Irgend ein Event
+Event.ANY
+
+// Irgend ein Action event
+ActionEvent.ANY
+
+// Ein Event das sowohl ein Maus-klick oder auch eine Tastatureingabe sein könnte
+InputEvent.ANY -> KeyEvent.ANY oder MouseEvent.ANY (MouseEvent.MOUSE_CLICKED)

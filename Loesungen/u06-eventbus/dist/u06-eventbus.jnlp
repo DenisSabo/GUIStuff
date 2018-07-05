@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="u06-eventbus.jnlp">
+  <information>
+    <title>u06-eventbus</title>
+    <vendor>dominik.haas</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="u06-eventbus.jar" size="21492" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="u06-eventbus" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="de.fhrosenheim.gui.u06.U06EventBus"  name="u06-eventbus" />
+  <update check="always"/>
+</jnlp>

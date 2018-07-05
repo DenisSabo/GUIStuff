@@ -1,0 +1,40 @@
+IEventBusListener:
+
+public interface IEventBusListener<T>{
+	
+	void onEvent(T event);
+	
+}
+
+
+
+
+
+IEventBus:
+
+public interface IEventBus{
+	
+	void publish(Object event);
+
+	<T> void subscribe(Class<T> type, IEventBusListener<T> listener);
+
+}
+
+
+StatusEvent:
+
+public class StatusEvent extends EventObject {
+    
+    private final String status; // Event must transport data
+
+    public StatusEvent(Object source, String status) { 
+        super(source);
+        this.status = status;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+    
+}
+

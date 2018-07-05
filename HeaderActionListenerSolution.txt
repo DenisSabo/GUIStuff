@@ -1,0 +1,43 @@
+Interface HeaderActionListener:
+
+
+public interface HeaderActionListener {
+    void onGenerateGraph();
+}
+
+
+HeaderController:
+
+
+@override
+public void initialize(URL url, ResourceBundle resources){
+	generateGraphButton.setOnAction(this::onGenerateGraph);
+
+	oder aussgeschrieben:
+
+	generateGraphButton.setOnAction(new EventHandler<ActionEvent>(){
+		@Override
+		public void handle(ActionEvent event) {
+			onGenerateGraph(event);
+		}
+	});
+}
+
+private void onGenerateGraph(ActionEvent e) {
+	LOGGER.log(Level.INFO, "on generate graph: {0}", settingsModel);
+	if(this.actionListener != null) {
+		this.actionListener.onGenerateGraph();
+	}
+}
+
+public void setActionListener(HeaderActionListener actionListener) {
+	this.actionListener = actionListener;
+}
+
+Im ChartController, d.h. Komponente die Header nutzt:
+
+// Implementierung des Interfaces HeaderActionListener
+
+headerController.setActionListener(() -> {
+	generateChartData();
+});
